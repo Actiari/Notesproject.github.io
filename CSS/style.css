@@ -1,0 +1,964 @@
+/* =========================================
+   1. GLOBAL STYLES & FONTS
+   ========================================= */
+html, body {
+  font-family: 'IBM Plex Sans', sans-serif !important;
+}
+
+body {
+  background: #343a40 !important;
+}
+
+/* Fix for Bootstrap Icons font family */
+.bi {
+  font-family: 'bootstrap-icons' !important; 
+}
+
+/* Navbar Divider */
+nav.navbar {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Ensure the job area fills the screen height */
+.job-display-area {
+    background-color: #1a1d20;
+    min-height: calc(100vh - 400px); /* Adjust based on your header/footer size */
+}
+
+/* Form Styles for the new page */
+.form-container-custom {
+    background-color: #212529;
+    border: 1px solid #333;
+    border-radius: 12px;
+    padding: 40px;
+    max-width: 700px;
+    margin: 50px auto;
+}
+
+.form-control:focus {
+    background-color: #2b3035;
+    color: white;
+    border-color: #6c757d;
+    box-shadow: none;
+}
+
+/* =========================================
+   2. NAVIGATION
+   ========================================= */
+header {
+  background-color: #343a40;
+}
+
+.navbar {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.navbar-brand {
+  margin-right: 1.25rem;
+  flex-shrink: 0;
+  margin-bottom: 1rem;
+  padding-bottom: 0;
+  padding-top: 0.4rem;
+}
+
+.navbar-brand img {
+  height: 40px;
+  margin-right: 12px;
+  display: block;
+}
+
+.nav-pills .nav-link {
+  color: white !important;
+}
+
+.nav-pills .nav-link:hover {
+  color: #e2e6ea !important;
+}
+
+.navbar-nav .nav-link.active {
+  background-color: #6c757d;
+  border-radius: 0.375rem;
+  color: white !important;
+  padding: 0.5rem 1rem;
+}
+
+.navbar-collapse {
+  width: 100%;
+}
+
+@media (max-width: 991.98px) {
+  .navbar-nav .nav-link {
+    padding: 0.5rem 1rem;
+  }
+
+  .navbar-brand {
+    flex-shrink: 0;
+    margin-right: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .navbar {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    align-items: center;
+  }
+}
+
+/* =========================================
+   HERO CAROUSEL: RESPONSIVE ASPECT RATIO
+   ========================================= */
+
+/* 1. MOBILE FIRST (Default): Set to 1:1 Square */
+#heroCarousel .carousel-item {
+  width: 100%;
+  aspect-ratio: 1 / 1; /* Makes the carousel a square on phones */
+  background-color: #1a1a1a;
+  overflow: hidden;
+}
+
+/* 2. TABLET/DESKTOP (Medium and up): Set to 16:9 Cinematic */
+@media (min-width: 768px) {
+  #heroCarousel .carousel-item {
+    aspect-ratio: 16 / 9; /* Swaps to widescreen on tablets/laptops */
+    max-height: 650px;    /* Prevents it from getting too tall on giant monitors */
+  }
+}
+
+/* 3. THE IMAGE: Make it fill the box without stretching */
+#heroCarousel .carousel-item img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important; /* This "eats the sides" on desktop and "eats the top/bottom" on mobile */
+  object-position: center center !important;
+}
+
+/* Carousel Controls & Indicators */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-image: none;
+  width: 3rem;
+  height: 3rem;
+}
+
+.carousel-control-prev-icon::after,
+.carousel-control-next-icon::after {
+  content: '';
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  border-top: 0.35rem solid #ffffff;
+  border-right: 0.35rem solid #ffffff;
+}
+
+.carousel-control-prev-icon::after {
+  transform: rotate(-135deg);
+}
+
+.carousel-control-next-icon::after {
+  transform: rotate(45deg);
+}
+
+.carousel-indicators [data-bs-target] {
+  background-color: #ffffff;
+  opacity: 0.6;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.carousel-indicators .active {
+  opacity: 1;
+  background-color: #ffffff;
+}
+
+.carousel-caption {
+  top: 0;
+  bottom: 0;
+}
+
+/* Search Overlay Logic */
+.carousel-search-overlay {
+  display: none !important;
+}
+
+.home-page .carousel-search-overlay {
+  display: flex !important;
+}
+
+.carousel-caption input.form-control-lg {
+  border: 1px solid #ced4da;
+}
+
+.carousel-caption button.btn-primary {
+  background-color: #6c757d;
+  border: none;
+}
+
+.carousel-caption button.btn-primary:hover {
+  background-color: #5a6268;
+}
+
+/* =========================================
+   4. UI ELEMENTS (Buttons, Forms, Cards)
+   ========================================= */
+
+/* Generic Form Elements */
+form input.form-control-lg {
+  border: 1px solid #ced4da;
+}
+
+form button.btn-primary {
+  background-color: #6c757d;
+  border: none;
+}
+
+form button.btn-primary:hover {
+  background-color: #5a6268;
+}
+
+/* Custom HotBeans Button (.hb-btn) */
+.hb-btn {
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  padding: 12px 26px; /* Kept the larger padding version */
+  font-size: 1.15rem;
+  border-radius: 6px;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.hb-btn:hover {
+  background-color: #5a6268;
+  transform: translateY(-2px);
+}
+
+/* Back to Top Button */
+#backToTop {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  width: 55px;
+  height: 55px;
+  background-color: #6c757d;
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 55px;
+  cursor: pointer;
+  z-index: 9999;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  
+  opacity: 0;
+  visibility: hidden; 
+  transition: all 0.3s ease;
+}
+
+#backToTop i {
+  font-size: 24px;
+  line-height: 55px;
+}
+
+#backToTop.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* =========================================
+   5. PAGE SPECIFIC: COURSES
+   ========================================= */
+.course-card {
+  display: flex;
+  gap: 2rem;
+  max-height: 260px;
+}
+
+.course-card-image {
+  flex: 1;
+  max-width: 40%;
+}
+
+.course-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.course-card-content {
+  flex: 1;
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+  padding: 1.5rem;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@media (max-width: 767px) {
+  .course-card {
+    flex-direction: column;
+    max-height: none;
+  }
+
+  .course-card-image {
+    display: none;
+  }
+}
+
+/* =========================================
+   6. PAGE SPECIFIC: ABOUT & CONTACT
+   ========================================= */
+.about-row {
+  display: flex;
+  gap: 2rem;
+  height: 220px; 
+}
+
+.about-image {
+  flex: 1;
+}
+
+.about-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.about-contact {
+  flex: 1;
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+  padding: 1rem;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow: hidden; 
+}
+
+.about-contact h2 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.25rem;
+}
+
+.about-contact p {    
+  margin: 0.15rem 0;
+  line-height: 1.15;
+  font-size: 0.9rem;
+}
+
+/* Contact Card */
+.contact-card {
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+  border: 1px solid #333;
+  border-radius: 8px;
+}
+.contact-card .card-body {
+  text-align: left;
+  padding: 1rem 1.25rem;
+}
+.contact-card .card-title {
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+}
+.contact-card .card-text {
+  color: #cfcfcf;
+  margin-bottom: 1rem;
+}
+.contact-card .hb-btn {
+  padding: 10px 18px; /* Override for smaller button in card */
+}
+
+/* Accordion */
+.accordion-dark .accordion-item {
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.accordion-dark .accordion-button {
+  background-color: #2a2a2a;
+  color: #e0e0e0;
+  border: none;
+  position: relative;
+}
+
+.accordion-dark .accordion-button:not(.collapsed) {
+  background-color: #3a3a3a;
+  color: white;
+}
+
+.accordion-button::after {
+  content: "▸";
+  font-size: 1.2rem;
+  color: #ccc;
+  transform: rotate(0deg);
+  transition: transform 0.2s ease;
+}
+
+.accordion-button:not(.collapsed)::after {
+  transform: rotate(90deg);
+  color: white;
+}
+
+.accordion-dark .accordion-body {
+  background-color: #1e1e1e;
+  color: #cfcfcf;
+}
+
+.form-embed {
+  width: 100%;
+  max-width: 900px;
+  height: 900px;
+  border: none;
+}
+
+@media (max-width: 767px) {
+  .about-row {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .about-image {
+    display: none;
+  }
+}
+
+/* =========================================
+   7. FOOTER
+   ========================================= */
+footer.footer {
+  background-color: #343a40;
+  color: #e2e6ea;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  border-top: 1px solid #495057;
+}
+
+footer.footer a {
+  color: #e2e6ea;
+}
+
+footer.footer a:hover {
+  color: #ffffff;
+}
+
+footer.footer h5 {
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+footer.footer .col-md-4,
+footer.footer .col-md-5 {
+  padding-right: 2rem;
+  padding-left: 2rem;
+}
+
+footer.footer ul.nav li {
+  margin-bottom: 0.75rem;
+}
+
+.footer .ratio {
+  --bs-aspect-ratio: calc(100% / (16/10)) !important;
+}
+
+.footer .ratio iframe {
+  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.footer a:hover {
+  color: #ffffff !important;
+}
+
+@media (max-width: 768px) {
+  footer.footer .col-md-4,
+  footer.footer .col-md-5 {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+}
+
+/* =========================================
+   TEAM SECTION: CLEAN SINGLE CARD
+   ========================================= */
+
+.team-section {
+  padding: 80px 0;
+  background-color: #343a40; /* Match site background */
+}
+
+.team-card {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #1e1e1e; /* Matches your other cards */
+  border: 1px solid #333;
+  border-radius: 12px;
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.team-card .img-wrapper {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid #6c757d;
+}
+
+.team-card .img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Text Styles to match your site's typography */
+.team-card .name-text {
+  color: #ffffff;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.team-card .role-text {
+  color: #adb5bd;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.team-card .desc-text {
+  color: #e0e0e0;
+  line-height: 1.6;
+}
+
+/* =========================================
+   FIXED CENTERED ARROWS
+   ========================================= */
+
+/* Use Flexbox to center the Bootstrap icon perfectly in the circle */
+.team-ctrl {
+  width: 60px;
+  height: 60px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.8;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: background-color 0.3s ease;
+}
+
+.team-ctrl:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  opacity: 1;
+}
+
+/* Reposition the controls to sit outside the card on desktop */
+.carousel-control-prev.team-ctrl {
+  left: 5%;
+}
+
+.carousel-control-next.team-ctrl {
+  right: 5%;
+}
+
+/* Ensure the default Bootstrap icon is centered in the flex container */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  margin: 0 auto; /* Ensure no weird shifting */
+}
+
+/* On Mobile, move arrows closer or hide them */
+@media (max-width: 992px) {
+  .team-ctrl {
+    width: 50px;
+    height: 50px;
+  }
+  .carousel-control-prev.team-ctrl { left: 0; }
+  .carousel-control-next.team-ctrl { right: 0; }
+}
+
+/* =========================================
+   TRENDING JOBS STYLES
+   ========================================= */
+
+.trending-jobs-section {
+  background-color: #343a40; /* Match site background */
+}
+
+.job-card {
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+  border-radius: 12px;
+  padding: 30px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+
+.job-badge {
+  background-color: rgba(108, 117, 125, 0.2);
+  color: #adb5bd;
+  padding: 4px 12px;
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-bottom: 15px;
+  width: fit-content;
+}
+
+.job-title {
+  color: #ffffff;
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.job-desc {
+  color: #adb5bd;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  flex-grow: 1; /* Pushes the salary and button to the bottom */
+}
+
+.job-salary {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  padding-top: 15px;
+  border-top: 1px solid #333;
+}
+
+/* Reusing your .hb-btn styles - just making sure it's consistent */
+.job-card .hb-btn {
+  padding: 10px 20px;
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .job-card {
+    padding: 20px;
+  }
+}
+
+/* =========================================
+   DARK SEARCH BAR (Matches Job Cards)
+   ========================================= */
+.search-container-dark {
+  background-color: rgba(30, 30, 30, 0.85); /* Semi-transparent card style */
+  backdrop-filter: blur(10px); /* Modern frosted glass effect */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  width: 100%;
+  max-width: 800px;
+}
+
+.search-container-dark input::placeholder {
+  color: #6c757d;
+}
+
+/* Fix for the magnifying glass inside the input */
+.search-container-dark .input-group-text {
+  border-right: none;
+}
+.search-container-dark input {
+  border-left: none;
+}
+
+/* =========================================
+   REFINED TRENDING JOBS & DIVIDERS
+   ========================================= */
+.trending-jobs-section {
+  background-color: #2b3035; /* Slightly different gray to break up the flow */
+  padding-top: 100px !important;
+  padding-bottom: 100px !important;
+}
+
+/* Optional: Add a slight shadow to the top of the section for depth */
+.trending-jobs-section {
+  box-shadow: inset 0 10px 15px -10px rgba(0,0,0,0.5);
+}
+
+.job-card {
+  background-color: #1e1e1e;
+  border: 1px solid #444; /* Slightly more visible border */
+  border-radius: 12px;
+  padding: 30px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.job-salary {
+  color: #ffffff;
+  font-weight: 600;
+  border-top: 1px solid #333;
+  margin-top: auto; /* Ensures salary stays at bottom */
+  padding-top: 20px;
+}
+
+/* =========================================
+   CENTERED TITLE BREAK
+   ========================================= */
+.trending-jobs-section h2 {
+  font-size: 2.5rem;
+  letter-spacing: -1px;
+}
+
+/* Job Search Page Specifics */
+.filter-btn.active {
+    background-color: #6c757d;
+    color: white;
+    border-color: #6c757d;
+}
+
+#mainSearchInput {
+    height: 60px;
+    border-radius: 8px 0 0 8px;
+}
+
+#searchBtn {
+    border-radius: 0 8px 8px 0;
+}
+
+.fav-btn {
+    z-index: 10;
+    transition: transform 0.2s ease;
+    background: transparent;
+    border: none;
+}
+
+.fav-btn:hover {
+    transform: scale(1.2);
+}
+
+.job-card .job-badge {
+    margin-right: 40px; /* Make room for the bookmark button */
+}
+
+/* ============================================================================
+   Merged from jobs.css
+   ============================================================================ */
+.job-page-wrapper {
+  background-color: #1a1a1a;
+  min-height: 100vh;
+}
+
+.job-list-column {
+  height: calc(100vh - 100px);
+  overflow-y: auto;
+  background-color: #222;
+}
+
+.job-details-column {
+  height: calc(100vh - 100px);
+  overflow-y: auto;
+  position: sticky;
+  top: 100px;
+}
+
+.job-item-card {
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.job-item-card:hover {
+  background-color: #2d2d2d;
+}
+
+.job-item-card.active {
+  background-color: #333;
+  border-left: 4px solid #6c757d;
+}
+
+.job-list-column::-webkit-scrollbar {
+  width: 6px;
+}
+.job-list-column::-webkit-scrollbar-thumb {
+  background: #444;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-in;
+}
+
+.navbar-brand img {
+  height: 50px;
+  width: auto;
+}
+
+footer img[alt="Site Logo"] {
+  height: 60px;
+  width: auto;
+}
+
+.decorative-underline {
+  width: 60px;
+  height: 3px;
+  background-color: #6c757d;
+  border-radius: 2px;
+  margin: 1rem auto 0;
+}
+
+.ratio iframe {
+  border: 0;
+}
+
+.job-spec-page, html.job-spec-page {
+  background-color: #1a1d20 !important;
+  color: #ffffff;
+}
+
+@media (min-width: 768px) {
+  .job-list-column, .job-details-column {
+    height: calc(100vh - 180px);
+    overflow-y: auto;
+  }
+  #mobile-back-header { display: none !important; }
+}
+
+@media (max-width: 767.98px) {
+  .job-list-column { display: block; width: 100%; }
+  .job-details-column { display: none; width: 100%; }
+
+  body.mobile-view-active .job-list-column,
+  body.mobile-view-active section.py-5,
+  body.mobile-view-active footer {
+    display: none !important;
+  }
+
+  body.mobile-view-active .job-details-column {
+    display: block !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 9999;
+    background-color: #1a1d20 !important;
+    overflow-y: auto;
+  }
+
+  #mobile-back-header {
+    display: flex !important;
+    background: #212529;
+    padding: 15px;
+    border-bottom: 1px solid #333;
+    position: sticky;
+    top: 0;
+    z-index: 10001;
+  }
+}
+
+.btn-back {
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.contact-card {
+  max-width: 900px;
+}
+
+.empty-state-icon {
+  font-size: 3rem;
+}
+
+.success-icon {
+  font-size: 5rem;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 767px) {
+  .job-list-column { height: auto; }
+}
+
+.job-display-area {
+  background-color: #343a40;
+  min-height: 70vh;
+}
+
+.job-list-column {
+  height: 800px;
+  overflow-y: auto;
+  background-color: #212529;
+}
+
+.job-details-column {
+  height: 800px;
+  overflow-y: auto;
+  background-color: #1a1d20;
+}
+
+.job-item-card {
+  cursor: pointer;
+  border-bottom: 1px solid #333;
+  transition: all 0.2s ease;
+  padding: 20px;
+}
+
+.job-item-card:hover {
+  background-color: #2c3034;
+}
+
+.job-item-card.active {
+  background-color: #32373d;
+  border-left: 5px solid #6c757d;
+}
+
+.fav-btn-sm {
+  background: transparent;
+  border: none;
+  padding: 0;
+  transition: transform 0.2s;
+}
+
+.fav-btn-sm:hover {
+  transform: scale(1.2);
+}
+
+.job-list-column::-webkit-scrollbar { width: 5px; }
+.job-list-column::-webkit-scrollbar-thumb { background: #495057; border-radius: 10px; }
+
+body.job-spec-page {
+  background-color: #1a1d20 !important;
+}
+
+.job-spec-page .job-display-area {
+  background-color: #1a1d20;
+  min-height: calc(100vh - 500px);
+}
+
+@media (min-width: 992px) {
+  .job-spec-page .job-list-column, 
+  .job-spec-page .job-details-column {
+    height: 85vh;
+    min-height: 600px;
+  }
+}

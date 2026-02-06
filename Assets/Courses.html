@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/x-icon" href="../Assets/Favicon/favicon.ico">
+  <title>Web Development Courses | HotBeans</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="../CSS/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid px-3">
+      <a class="navbar-brand d-flex align-items-center me-2" href="../index.html">
+        <img src="../Assets/Favicon/logo.png" alt="Site Logo" class="me-2" loading="lazy">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto me-5 mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a href="../index.html" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="Courses.html" class="nav-link active">Web Development Courses</a>
+          </li>
+          <li class="nav-item">
+            <a href="JobSpec.html" class="nav-link">Apply for Jobs</a>
+          </li>
+          <li class="nav-item">
+            <a href="About.html" class="nav-link">About Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <picture>
+          <source media="(max-width: 767px)" srcset="../Assets/Images/Course/GCourse-Mobile-1.jpg">
+          <source media="(min-width: 768px)" srcset="../Assets/Images/Course/GCourse-1.jpg">
+          <img src="../Assets/Images/Course/GCourse-1.jpg" class="d-block w-100" alt="Student learning web development" loading="lazy">
+        </picture>
+      </div>
+      <div class="carousel-item">
+        <picture>
+          <source media="(max-width: 767px)" srcset="../Assets/Images/Course/GCourse-Mobile-2.jpg">
+          <source media="(min-width: 768px)" srcset="../Assets/Images/Course/GCourse-2.jpg">
+          <img src="../Assets/Images/Course/GCourse-2.jpg" class="d-block w-100" alt="Coding on a laptop" loading="lazy">
+        </picture>
+      </div>
+    </div>
+    <div class="carousel-caption d-flex justify-content-center align-items-center h-100 carousel-search-overlay">
+      <div class="search-container-dark p-4 rounded shadow-lg">
+        <form action="JobSpec.html" method="GET" class="d-flex gap-2">
+          <div class="input-group">
+            <span class="input-group-text bg-transparent border-secondary text-secondary">
+              <i class="bi bi-search"></i>
+            </span>
+            <input name="search" type="text" class="form-control form-control-lg bg-transparent text-white border-secondary shadow-none" placeholder="Search for jobs or skills...">
+          </div>
+          <button type="submit" class="btn hb-btn px-4">Search</button>
+        </form>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+
+  <div class="container py-5">
+    <div class="course-card mb-4">
+      <div class="course-card-image d-none d-md-block">
+        <img src="../Assets/Images/Course/course-1.png" alt="freeCodeCamp logo" loading="lazy">
+      </div>
+      <div class="course-card-content">
+        <h2 class="fw-bold mb-3">freeCodeCamp</h2>
+        <p class="mb-4">Learn the fundamentals of HTML and CSS including modern layout, design, accessibility, and responsive development. Build practical projects and gain the skills to create professional user friendly webpages. Complete required projects and pass the certification exam to earn the freeCodeCamp Responsive Web Design Certification.</p>
+        <a href="https://www.freecodecamp.org/learn/2022/responsive-web-design" class="btn hb-btn" target="_blank">Visit Course Page</a>
+      </div>
+    </div>
+
+    <div class="course-card mb-4">
+      <div class="course-card-image d-none d-md-block">
+        <img src="../Assets/Images/Course/course-2.png" alt="The Odin Project logo" loading="lazy">
+      </div>
+      <div class="course-card-content">
+        <h2 class="fw-bold mb-3">The Odin Project</h2>
+        <p class="mb-4">This path guides you through the complete JavaScript curriculum. You learn to create responsive websites from scratch using JavaScript and NodeJS. The program covers HTML, CSS, JavaScript, and advanced techniques while teaching you to build dynamic applications, manipulate the DOM, and work with real world data using APIs.</p>
+        <a href="https://www.theodinproject.com/paths/full-stack-javascript" class="btn hb-btn" target="_blank">Visit Course Page</a>
+      </div>
+    </div>
+
+    <div class="course-card mb-4">
+      <div class="course-card-image d-none d-md-block">
+        <img src="../Assets/Images/Course/course-3.png" alt="Meta Coursera logo" loading="lazy">
+      </div>
+      <div class="course-card-content">
+        <h2 class="fw-bold mb-3">Coursera</h2>
+        <p class="mb-4">Launch your career as a front end developer with job ready skills taught by Meta staff. Learn to create responsive websites using HTML, CSS, and JavaScript while gaining experience with React and version control. No prior experience is required and the program provides a flexible beginner friendly learning path.</p>
+        <a href="https://www.coursera.org/professional-certificates/meta-front-end-developer" class="btn hb-btn" target="_blank">Visit Course Page</a>
+      </div>
+    </div>
+
+    <div class="course-card mb-4">
+      <div class="course-card-image d-none d-md-block">
+        <img src="../Assets/Images/Course/course-4.png" alt="Udemy logo" loading="lazy">
+      </div>
+      <div class="course-card-content">
+        <h2 class="fw-bold mb-3">Udemy</h2>
+        <p class="mb-4">Master modern full stack web development from scratch through hands on projects. Learn to build and style responsive websites, develop interactive pages with JavaScript, create front end apps with React, build RESTful APIs with Node and Express, manage data with MongoDB, and deploy full stack applications.</p>
+        <a href="https://www.udemy.com/course/the-complete-web-developer-bootcamp" class="btn hb-btn" target="_blank">Visit Course Page</a>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer bg-dark text-light pt-5 border-top">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 mb-4">
+          <a href="../index.html" class="d-flex align-items-center mb-3 text-decoration-none">
+            <img src="../Assets/Favicon/logo.png" alt="Site Logo" loading="lazy">
+          </a>
+          <p class="small text-secondary">© 2025 HotBeans Ltd. All rights reserved. Unauthorized use is prohibited.</p>
+          <div class="d-flex gap-3">
+            <a href="https://www.facebook.com/" class="text-secondary fs-4" target="_blank" rel="noopener noreferrer"><i class="bi bi-facebook"></i></a>
+            <a href="https://twitter.com/" class="text-secondary fs-4" target="_blank" rel="noopener noreferrer"><i class="bi bi-twitter"></i></a>
+            <a href="https://www.instagram.com/" class="text-secondary fs-4" target="_blank" rel="noopener noreferrer"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.linkedin.com/" class="text-secondary fs-4" target="_blank" rel="noopener noreferrer"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <h5 class="text-light">Contact</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2 text-secondary">123 Business Street</li>
+            <li class="nav-item mb-2 text-secondary">Plymouth, UK</li>
+            <li class="nav-item mb-2 text-secondary">Email: info@example.com</li>
+            <li class="nav-item mb-2 text-secondary">Phone: 01234 567890</li>
+          </ul>
+        </div>
+
+        <div class="col-md-5 mb-4">
+          <h5 class="text-light">Find Us</h5>
+          <div class="ratio ratio-4x3">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10171.103432498838!2d-4.149541844580101!3d50.40801469999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x486ced2ffaba5619%3A0x60a5e40f2662606e!2sPlumer%20House!5e0!3m2!1sen!2suk!4v1770385383374!5m2!1sen!2suk" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="../JS/script.js"></script>
+  <div id="backToTop">
+    <i class="bi bi-chevron-up"></i>
+  </div>
+</body>
+</html>
