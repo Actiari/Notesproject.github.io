@@ -1,240 +1,32 @@
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" type="image/x-icon" href="Assets/Favicon/favicon.ico">
-    <title>Home</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
-    <link rel="stylesheet" href="CSS/style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  </head>
-
-  <body class="home-page">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="container-fluid px-3">
-        <a class="navbar-brand d-flex align-items-center me-2" href="/">
-          <img src="Assets/Favicon/logo.png" alt="Site Logo" class="me-2" loading="lazy">
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="mainNav">
-          <ul class="navbar-nav ms-auto me-5 mb-2 mb-lg-0">
-            <li class="nav-item"><a href="index.html" class="nav-link active">Home</a></li>
-            <li class="nav-item"><a href="Assets/Courses.html" class="nav-link">Web Development Courses</a></li>
-            <li class="nav-item"><a href="Assets/JobSpec.html" class="nav-link">Apply for Jobs</a></li>
-            <li class="nav-item"><a href="Assets/About.html" class="nav-link">About Us</a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-
-    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
-        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
-        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
-      </div>
-
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <picture>
-            <source media="(max-width: 767px)" srcset="Assets/Images/Home/Home-Mob-1.jpg">
-            <source media="(min-width: 768px)" srcset="Assets/Images/Home/Home-1.jpg">
-            <img src="Assets/Images/Home/Home-1.jpg" class="d-block w-100" alt="Professional web development team" loading="lazy">
-          </picture>
-        </div>
-
-        <div class="carousel-item">
-          <picture>
-            <source media="(max-width: 767px)" srcset="Assets/Images/Home/Home-Mob-2.jpg">
-            <source media="(min-width: 768px)" srcset="Assets/Images/Home/Home-2.jpg">
-            <img src="Assets/Images/Home/Home-2.jpg" class="d-block w-100" alt="Professional web development team" loading="lazy">
-          </picture>
-        </div>
-
-        <div class="carousel-item">
-          <picture>
-            <source media="(max-width: 767px)" srcset="Assets/Images/Home/Home-Mob-3.jpg">
-            <source media="(min-width: 768px)" srcset="Assets/Images/Home/Home-3.jpg">
-            <img src="Assets/Images/Home/Home-3.jpg" class="d-block w-100" alt="Professional web development team" loading="lazy">
-          </picture>
-        </div>
-      </div>
-
-      <div class="carousel-caption d-flex justify-content-center align-items-center h-100 carousel-search-overlay">
-        <div class="search-container-dark p-4 rounded shadow-lg">
-          <form action="Assets/JobSpec.html" method="GET" class="d-flex gap-2">
-            <div class="input-group">
-              <span class="input-group-text bg-transparent border-secondary text-secondary">
-                <i class="bi bi-search"></i>
-              </span>
-              <input name="search" type="text" class="form-control form-control-lg bg-transparent text-white border-secondary shadow-none" placeholder="Search for jobs...">
-            </div>
-            <button type="submit" class="btn hb-btn px-4">Search</button>
-          </form>
-        </div>
-      </div>
-
-      <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon"></span>
-      </button>
-
-      <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon"></span>
-      </button>
-    </div>
-
-    <section class="trending-jobs-section py-5 border-top border-secondary-subtle">
-      <div class="container text-center">
-        <div class="row justify-content-center mb-5">
-          <div class="col-lg-8">
-            <h2 class="fw-bold text-white mb-3">Trending Opportunities</h2>
-            <p class="text-secondary">We are looking for talented individuals to help us build the future of the web.</p>
-            <div class="decorative-underline"></div>
-          </div>
-        </div>
-
-        <div class="row g-4 justify-content-center text-start">
-          <div class="col-md-4">
-            <div class="job-card">
-              <div class="job-badge">Remote</div>
-              <h3 class="job-title">Senior Frontend Developer</h3>
-              <p class="job-desc">Lead the development of modern, responsive user interfaces using React and Next.js.</p>
-              <div class="job-salary">£55,000 - £75,000</div>
-              <a href="Assets/JobSpec.html?search=Senior+Frontend+Developer" class="btn hb-btn w-100">Apply Now</a>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="job-card">
-              <div class="job-badge">Hybrid</div>
-              <h3 class="job-title">Full Stack Engineer</h3>
-              <p class="job-desc">Work across the entire stack from Node.js APIs to robust database architecture.</p>
-              <div class="job-salary">£50,000 - £70,000</div>
-              <a href="Assets/JobSpec.html?search=Full+Stack+Engineer" class="btn hb-btn w-100">Apply Now</a>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="job-card">
-              <div class="job-badge">Remote</div>
-              <h3 class="job-title">UI/UX Designer</h3>
-              <p class="job-desc">Create beautiful, user-centric designs and wireframes for high-growth tech startups.</p>
-              <div class="job-salary">£45,000 - £60,000</div>
-              <a href="Assets/JobSpec.html?search=UI/UX+Designer" class="btn hb-btn w-100">Apply Now</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="team-section py-5">
-      <div class="container text-center">
-        <h2 class="fw-bold text-white mb-5">Meet Our Experts</h2>
-        <div id="teamCarousel" class="carousel slide team-stage" data-bs-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <div class="team-card">
-                <div class="img-wrapper">
-                  <img src="Assets/Images/Team/alex.jpg" alt="Alex Rivers" loading="lazy">
-                </div>
-                <div class="team-content">
-                  <h3 class="name-text">Alex Rivers</h3>
-                  <p class="role-text">Founder & Lead Architect</p>
-                  <p class="desc-text">Alex has over 12 years of experience in technical architecture, overseeing every project from concept to deployment.</p>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="team-card">
-                <div class="img-wrapper">
-                  <img src="Assets/Images/Team/sarah.jpg" alt="Sarah Chen" loading="lazy">
-                </div>
-                <div class="team-content">
-                  <h3 class="name-text">Sarah Chen</h3>
-                  <p class="role-text">Senior UI/UX Designer</p>
-                  <p class="desc-text">Sarah specializes in human-centric design, ensuring your website is as intuitive and easy to use as it is beautiful.</p>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="team-card">
-                <div class="img-wrapper">
-                  <img src="Assets/Images/Team/marcus.jpg" alt="Marcus Thorne" loading="lazy">
-                </div>
-                <div class="team-content">
-                  <h3 class="name-text">Marcus Thorne</h3>
-                  <p class="role-text">Backend Specialist</p>
-                  <p class="desc-text">A wizard with database logic and server-side security, Marcus makes sure your site's engine runs flawlessly.</p>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="team-card">
-                <div class="img-wrapper">
-                  <img src="Assets/Images/Team/jordan.jpg" alt="Jordan Lee" loading="lazy">
-                </div>
-                <div class="team-content">
-                  <h3 class="name-text">Jordan Lee</h3>
-                  <p class="role-text">Frontend Developer</p>
-                  <p class="desc-text">Jordan focuses on the "look and feel," specializing in modern CSS, mobile responsiveness, and clean animations.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#teamCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#teamCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          </button>
-        </div>
-      </div>
-    </section>
-
-    <footer class="footer bg-dark text-light pt-5 mt-5 border-top">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-3 mb-4">
-            <a href="/" class="d-flex align-items-center mb-3 text-decoration-none">
-                <img src="Assets/Favicon/logo.png" alt="Site Logo" loading="lazy">
-              </a>
-            <p class="small text-secondary">© 2025 HotBeans Ltd. All rights reserved. Unauthorized use is prohibited.</p>
-            <div class="d-flex gap-3">
-              <a href="https://www.facebook.com/" class="text-secondary fs-4" target="_blank" rel="noopener noreferrer"><i class="bi bi-facebook"></i></a>
-              <a href="https://twitter.com/" class="text-secondary fs-4" target="_blank" rel="noopener noreferrer"><i class="bi bi-twitter"></i></a>
-              <a href="https://www.instagram.com/" class="text-secondary fs-4" target="_blank" rel="noopener noreferrer"><i class="bi bi-instagram"></i></a>
-              <a href="https://www.linkedin.com/" class="text-secondary fs-4" target="_blank" rel="noopener noreferrer"><i class="bi bi-linkedin"></i></a>
-            </div>
-          </div>
-          <div class="col-md-4 mb-4">
-            <h5 class="text-light">Contact</h5>
-            <ul class="nav flex-column">
-              <li class="nav-item mb-2 text-secondary">123 Business Street</li>
-              <li class="nav-item mb-2 text-secondary">Plymouth, UK</li>
-              <li class="nav-item mb-2 text-secondary">Email: info@example.com</li>
-              <li class="nav-item mb-2 text-secondary">Phone: 01234 567890</li>
-            </ul>
-          </div>
-          <div class="col-md-5 mb-4">
-            <h5 class="text-light">Find Us</h5>
-            <div class="ratio ratio-4x3">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10171.103432498838!2d-4.149541844580101!3d50.40801469999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x486ced2ffaba5619%3A0x60a5e40f2662606e!2sPlumer%20House!5e0!3m2!1sen!2suk!4v1770385383374!5m2!1sen!2suk" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="JS/script.js"></script>
-
-    <div id="backToTop">
-      <i class="bi bi-chevron-up"></i>
-    </div>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hot Beans Web | Join Our Team</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.42.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="bg-slate-50 text-slate-900">
+    <div id="root"></div>
+<script type="module" src="/index.tsx"></script>
+</body>
 </html>
