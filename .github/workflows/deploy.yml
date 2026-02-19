@@ -29,6 +29,9 @@ jobs:
       - name: Add .nojekyll
         run: touch dist/.nojekyll
 
+      - name: Add _config.yml
+        run: echo "# Disable Jekyll" > dist/_config.yml
+
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
