@@ -19,22 +19,23 @@ jobs:
         with:
           node-version: '18'
           cache: 'npm'
+          cache-dependency-path: src/package-lock.json
 
       - name: Install dependencies
-        run: npm ci
+        run: cd src && npm ci
 
       - name: Build
-        run: npm run build
+        run: cd src && npm run build
 
       - name: Add .nojekyll
-        run: touch dist/.nojekyll
+        run: touch src/dist/.nojekyll
 
       - name: Add _config.yml
-        run: echo "# Disable Jekyll" > dist/_config.yml
+        run: echo "# Disable Jekyll" > src/dist/_config.yml
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: dist
-          target-folder: docs
+          folder: src/dist
+          target-folder: .
           commit-message: Deploy to GitHub Pages
