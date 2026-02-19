@@ -1,0 +1,8 @@
+{
+  "name": "Hot Beans Web - Recruitment Portal",
+  "description": "A comprehensive recruitment sub-site for Hot Beans Web, featuring company profiles, trainee testimonials, job specifications, an online application form, and educational resources.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
